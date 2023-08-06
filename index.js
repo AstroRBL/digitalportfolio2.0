@@ -8,7 +8,6 @@ document.addEventListener("click", function (e) {
     const targetElement = document.getElementById(targetId);
 
     if (targetId === "home") {
-      // Add this condition for the "Home" link
       window.scrollTo({
         top: 0,
         behavior: "smooth",
