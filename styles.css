@@ -9,34 +9,32 @@ html {
   margin: 0;
   padding: 0;
 }
-/* Add these styles to your existing CSS */
-/* Styling the scrollbar track */
+
 ::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+  width: 10px; 
 }
 
-/* Styling the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #76cfb7; /* Color of the thumb */
-  border-radius: 5px; /* Rounded corners of the thumb */
+  background-color: #76cfb7;
+  border-radius: 5px; 
 }
 
-/* Styling the scrollbar thumb on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #5aa89a; /* Color of the thumb on hover */
+  background-color: #5aa89a; 
 }
 
-/* Styling the scrollbar track on hover */
+
 ::-webkit-scrollbar-track:hover {
-  background-color: #f2f2f2; /* Color of the track on hover */
+  background-color: #f2f2f2; 
 }
 
-/* Styling the scrollbar track when not hovering */
+
 ::-webkit-scrollbar-track {
-  background-color: #fff; /* Color of the track */
+  background-color: #fff; 
 }
 
-/* Styling the scrollbar corner (not usually visible) */
+
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
@@ -145,7 +143,7 @@ html {
 }
 
 .work-card {
-  flex: 0 0 calc (33.33% - 40px); /* Each card takes up about 33.33% of the container width minus margins */
+  flex: 0 0 calc (33.33% - 40px);
   margin: 20px;
   padding: 20px;
   max-width: 300px;
