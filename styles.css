@@ -11,29 +11,27 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 10px; 
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #76cfb7;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #5aa89a; 
+  background-color: #5aa89a;
 }
-
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
+  display: none;
 }
-
 
 ::-webkit-scrollbar-track {
-  background-color: #fff; 
+  background-color: #fff;
+  display: none;
 }
-
 
 ::-webkit-scrollbar-corner {
   background-color: transparent;
@@ -43,7 +41,7 @@ html {
   position: absolute;
   margin-left: 260px;
   font-size: 50px;
-  z-index: 200;
+  z-index: 50;
   background-color: transparent;
   background: #76cfb7;
   background: linear-gradient(to bottom right, #76cfb7 26%, #b759cf 100%);
@@ -66,7 +64,6 @@ html {
   position: fixed;
   left: 87%;
   color: #fff;
-  cursor: pointer;
   letter-spacing: 2px;
   z-index: 100;
   background-color: transparent;
@@ -85,9 +82,14 @@ html {
 }
 .nav li {
   transition-duration: 0.8s;
-  background-color: transparent;
+  background-color: #27374d;
+  padding: 5px;
+  box-shadow: 0px 0px 20px -5px black;
+  border-radius: 3px;
+  text-align: center;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 .nav a {
   color: #fff;
@@ -112,7 +114,7 @@ html {
   height: 35%;
   color: #fff;
   background-color: transparent;
-  z-index: 100;
+  z-index: 50;
 }
 
 .about p {
@@ -137,7 +139,7 @@ html {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 60px;
-  background-color: #9db2bf;
+  background-color: #235e54;
   position: relative;
   top: 100%;
 }
@@ -148,18 +150,16 @@ html {
   padding: 20px;
   max-width: 300px;
   height: 450px;
-  background: rgba(255, 255, 255, 0.26);
+  max-height: 550px;
+  background: #05386b;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10%);
   border-radius: 10px;
-  box-shadow: 5px 5px 30px -5px #526d82, -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  transition: transform 0.6s, box-shadow 0.6s;
   text-align: center;
   color: #ffffff;
+  transition-duration: 0.7s;
 }
 
 .work-card:hover {
@@ -178,13 +178,13 @@ html {
   font-size: 1.5em;
   margin: 10px 0;
   text-align: center;
-  top: -10%;
+  top: 1%;
   background-color: transparent;
 }
 
 .work-card p {
   position: relative;
-  top: -10%;
+  top: 2%;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -197,7 +197,7 @@ html {
   outline: 0;
   border-radius: 20%;
   transition-duration: 0.7s;
-  top: 0%;
+  top: 4%;
   left: 45%;
 }
 .work-card button img {
@@ -228,7 +228,7 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 60px;
-  background-color: #526d82;
+  background-color: #2c3531;
   color: #fff;
   z-index: 10;
 }
@@ -272,7 +272,9 @@ html {
 }
 
 .contact textarea {
-  resize: vertical;
+  resize: none;
+  overflow-y: auto;
+  cursor: pointer;
 }
 
 .contact button {
@@ -289,4 +291,183 @@ html {
 
 .contact button:hover {
   background-color: #5aa89a;
+}
+
+.footer {
+  position: relative;
+  top: 100%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  color: #fff;
+}
+.footer p {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 41%;
+  text-align: center;
+  background-color: transparent;
+}
+.hamburger {
+  position: fixed;
+  left: 75%;
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+  background-color: transparent;
+}
+.close-ham {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 92%;
+  left: 80%;
+  margin: 25px 40px;
+  width: 20px;
+  z-index: 500;
+  background-color: transparent;
+}
+
+@media (max-width: 769px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1e2124;
+    backdrop-filter: blur(50%);
+    z-index: 100;
+  }
+
+  .nav ul {
+    display: none; /* Hide by default for smaller screens */
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .nav li {
+    position: relative;
+    margin-top: 30px;
+    background-color: #424549;
+    border-radius: 0px;
+  }
+  .about {
+    margin-left: 5%;
+    width: 90%;
+    height: auto;
+  }
+
+  .about p {
+    bottom: 0;
+    font-size: 18px;
+  }
+
+  .about h1 {
+    margin-top: 150px;
+    font-size: 43px;
+  }
+
+  .work {
+    padding: 40px;
+  }
+
+  .work-card {
+    flex-basis: calc(50% - -100px);
+  }
+  .work-card a img {
+    position: relative;
+    top: 10%;
+  }
+
+  .contact {
+    padding: 40px;
+  }
+
+  .contact h1 {
+    font-size: 30px;
+  }
+
+  .contact form {
+    max-width: 80%;
+    margin-right: 20px;
+  }
+
+  .contact label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    color: #dde6ed;
+    z-index: 100;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dde6ed;
+    transition-duration: 0.6s;
+    z-index: 100;
+  }
+
+  .contact textarea {
+    resize: none;
+    overflow-y: auto;
+    cursor: pointer;
+  }
+  .footer {
+    position: relative;
+    top: auto;
+    bottom: 0;
+    height: auto;
+  }
+
+  .footer p {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo h1 {
+    position: absolute;
+    top: -4%;
+    right: 80%;
+  }
+  .logo p {
+    position: absolute;
+    top: 16px;
+  }
+  .footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: #fff;
+  }
+  .footer p {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 49%;
+    text-align: center;
+    background-color: transparent;
+  }
 }
